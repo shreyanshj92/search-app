@@ -1,0 +1,44 @@
+<div class="container">
+  <h5 class="mainHeader">Documents</h5>
+  <h6 class="subHeader">Search document or select category</h6>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="category-list"
+        [ngStyle]="{'font-weight' : selectedCategory === '' ? '600' : null, 'border-bottom' : selectedCategory === '' && innerWidth < 720 ? '2px solid black' : null }"
+        (click)="applyFilter('')">All</div>
+      <div class="category-list"
+        [ngStyle]="{'font-weight' : selectedCategory === 'Technical' ? '600' : null, 'border-bottom' : selectedCategory === 'Technical' && innerWidth < 720 ? '2px solid black' : null }"
+        (click)="applyFilter('Technical')">Technical</div>
+      <div class="category-list"
+        [ngStyle]="{'font-weight' : selectedCategory === 'Financial' ? '600' : null, 'border-bottom' : selectedCategory === 'Financial' && innerWidth < 720 ? '2px solid black' : null }"
+        (click)="applyFilter('Financial')">Financial</div>
+      <div class="category-list"
+        [ngStyle]="{'font-weight' : selectedCategory === 'Human resource' ? '600' : null, 'border-bottom' : selectedCategory === 'Human resource' && innerWidth < 720 ? '2px solid black' : null }"
+        (click)="applyFilter('Human resource')">Human resource</div>
+      <div class="category-list"
+        [ngStyle]="{'font-weight' : selectedCategory === 'Marketing' ? '600' : null, 'border-bottom' : selectedCategory === 'Marketing' && innerWidth < 720 ? '2px solid black' : null }"
+        (click)="applyFilter('Marketing')">Marketing</div>
+    </div>
+    <div class="col-md-9">
+      <input type="text" class="input" [ngStyle]="{'margin-bottom' : !showHint ? '24px' : '0'}"
+        placeholder="Start typing document name..." (change)="updateSearchTerm($event)"
+        (keyup)="updateSearchTerm($event)" />
+      <span class="hint" *ngIf="showHint">Enter at least 3 character to see result</span>
+
+      <div class="row">
+        <div class="col-md-3" *ngFor="let document of documents | searchFilter : search">
+          <div class="card">
+            <p class="card-category"
+              [ngStyle]="{'background-color': document.category === 'Technical' ? '#f8ddf0' : (document.category === 'Financial' ? '#e2fae8' : (document.category === 'Human resource' ? '#ebe9e9' : (document.category === 'Marketing' ? '#fce7f5' : null))) }">
+              <small class="text-muted">{{ document.category }}</small>
+            </p>
+            <p class="card-content">{{ document.document }}</p>
+          </div>          
+        </div>
+        <div *ngIf="(documents | searchFilter: search).length === 0">
+            No records found.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

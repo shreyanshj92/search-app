@@ -1,0 +1,47 @@
+[
+    {
+        "id": 101,
+        "category": "Technical",
+        "document": "Terminal instructables"
+    },
+    {
+        "id": 102,
+        "category": "Technical",
+        "document": "Installation guides"
+    },
+    {
+        "id": 103,
+        "category": "Human resource",
+        "document": "Career opportunities"
+    },
+    {
+        "id": 104,
+        "category": "Financial",
+        "document": "Customer onboarding"
+    },
+    {
+        "id": 105,
+        "category": "Marketing",
+        "document": "Outlet branding"
+    },
+    {
+        "id": 106,
+        "category": "Financial",
+        "document": "Accounting procedures"
+    },
+    {
+        "id": 107,
+        "category": "Human resource",
+        "document": "Training"
+    },
+    {
+        "id": 108,
+        "category": "Marketing",
+        "document": "Printing guidance"
+    },
+    {
+        "id": 109,
+        "category": "Technical",
+        "document": "Technical support"
+    }
+]

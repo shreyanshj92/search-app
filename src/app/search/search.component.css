@@ -1,0 +1,80 @@
+.container {
+  height: 100vh;
+  margin: 20px;
+}
+
+.container>.row {
+  margin-top: 40px;
+}
+
+.container .row .category-list {
+  padding: 5px 20px;
+  font-size: 12px;
+}
+
+.container .input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #c0bebe;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  height: 40px;
+}
+
+.container .hint {
+  display: inline-block;
+  font-size: 10px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  text-align: right;
+}
+
+.container .row .col-md-9 .row .col-md-3 .card {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 80px;
+  width: 100%;
+  margin: 5px 0;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.container .row .col-md-9 .row .col-md-3 .card .card-category {
+  border-radius: 10px;
+  padding: 0 4px;
+  margin-bottom: 0;
+  font-size: 10px;
+  text-align: center;
+  margin: 3px 3px 0 60%;
+}
+
+.container .row .col-md-9 .row .col-md-3 .card .card-content {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    margin: 20px 0;
+  }
+
+  .container .row .category-list {
+    padding: 8px !important;
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .container .input {
+    margin-top: 10px;
+  }
+
+  .container .row .col-md-9 .row .col-md-3 .card .card-category {
+    border-radius: 10px;
+    padding: 0 4px;
+    margin-bottom: 0;
+    font-size: 10px;
+    text-align: center;
+    margin: 3px 3px 0 70%;
+  }
+}
